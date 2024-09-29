@@ -1,0 +1,336 @@
+09.29 11:36 PM
+
+
+#include <stdio.h>
+
+
+int find_greatest(int a, int b, int c) {
+    if (a >= b) {
+        if (a >= c) {
+            return a;
+        } else {
+            return c;
+        }
+    } else {
+        if (b >= c) {
+            return b;
+        } else {
+            return c;
+        }
+    }
+}
+
+int main() {
+    int num1, num2, num3;
+    
+    // Input the three numbers
+    printf("Enter the first number: ");
+    scanf("%d", &num1);
+    printf("Enter the second number: ");
+    scanf("%d", &num2);
+    printf("Enter the third number: ");
+    scanf("%d", &num3);
+
+    // Output the greatest number
+    printf("The greatest number is: %d\n", find_greatest(num1, num2, num3));
+
+    return 0;
+}
+
+2. Program to Calculate the Final Grade Based on Multiple Criteria 
+
+#include <stdio.h>
+ {
+    if (attendance < 75) {
+        return "Fail due to low attendance";
+    } else {
+        if (assignments < 50) {
+            return "Fail due to low assignment score";
+        } else {
+            if (exam < 50) {
+                return "Fail due to low exam score";
+            } else {
+                float final_score = (attendance * 0.2) + (assignments * 0.3) + (exam * 0.5);
+                if (final_score >= 90) {
+                    return "A";
+                } else if (final_score >= 80) {
+                    return "B";
+                } else if (final_score >= 70) {
+                    return "C";
+                } else if (final_score >= 60) {
+                    return "D";
+                } else {
+                    return "F";
+                }
+            }
+        }
+    }
+}
+
+int main() {
+    float attendance, assignments, exam;
+
+    // Input criteria values
+    printf("Enter attendance percentage: ");
+    scanf("%f", &attendance);
+    printf("Enter average assignment score: ");
+    scanf("%f", &assignments);
+    printf("Enter exam score: ");
+    scanf("%f", &exam);
+
+    // Output final grade
+    printf("Final grade: %s\n", calculate_final_grade(attendance, assignments, exam));
+
+    return 0;
+}
+
+3. Program to Perform Encryption and Decryption of a Character Using Bitwise Operators 
+
+#include <stdio.h>
+ {
+    return ch ^ key;  // XOR operation for encryption/decryption
+}
+
+int main() {
+    char character, encrypted_char, decrypted_char;
+    int key = 5;  // Key for encryption and decryption
+
+    // Input the character
+    printf("Enter a character to encrypt: ");
+    scanf(" %c", &character);
+
+    // Perform encryption
+    encrypted_char = encrypt_decrypt(character, key);
+    printf("Encrypted character: %c\n", encrypted_char);
+
+    // Perform decryption
+    decrypted_char = encrypt_decrypt(encrypted_char, key);
+    printf("Decrypted character: %c\n", decrypted_char);
+
+    return 0;
+}
+
+4. Program to Determine Loan Eligibility Using Logical Operators (in C)
+
+#include <stdio.h>
+ {
+    if (age >= 18 && income >= 30000 && credit_score >= 650) {
+        return "Eligible for a loan";
+    } else {
+        return "Not eligible for a loan";
+    }
+}
+
+int main() {
+    int age, credit_score;
+    float income;
+
+    // Input values for loan criteria
+    printf("Enter your age: ");
+    scanf("%d", &age);
+    printf("Enter your annual income: ");
+    scanf("%f", &income);
+    printf("Enter your credit score: ");
+    scanf("%d", &credit_score);
+
+    // Output loan eligibility result
+    printf("%s\n", check_loan_eligibility(age, income, credit_score));
+
+    return 0;
+}
+
+
+1. Program to categorize a person's age into different life stages:
+
+
+
+#include <stdio.h>
+
+int main() {
+    int age;
+
+    // Input age
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    // Categorize based on age
+    if (age >= 0) {
+        if (age <= 12) {
+            printf("You are a Child.\n");
+        } else if (age <= 19) {
+            printf("You are a Teenager.\n");
+        } else if (age <= 59) {
+            printf("You are an Adult.\n");
+        } else {
+            printf("You are a Senior.\n");
+        }
+    } else {
+        printf("Invalid age.\n");
+    }
+
+    return 0;
+}
+
+2. Program to determine if a number is positive, negative, or zero, and check if it's even or odd if positive:
+
+
+
+#include <stdio.h>
+
+int main() {
+    int number;
+
+    // Input the number
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    // Determine if positive, negative, or zero
+    if (number > 0) {
+        printf("The number is positive.\n");
+
+        // Check if the number is even or odd
+        if (number % 2 == 0) {
+            printf("It is an even number.\n");
+        } else {
+            printf("It is an odd number.\n");
+        }
+    } else if (number < 0) {
+        printf("The number is negative.\n");
+    } else {
+        printf("The number is zero.\n");
+    }
+
+    return 0;
+}
+
+
+
+1. Program to check if a number is divisible by both 3 and 5 using logical operators:
+
+
+
+#include <stdio.h>
+
+int main() {
+    int number;
+
+    // Input the number
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    // Check if the number is divisible by both 3 and 5
+    if (number % 3 == 0 && number % 5 == 0) {
+        printf("The number %d is divisible by both 3 and 5.\n", number);
+    } else {
+        printf("The number %d is not divisible by both 3 and 5.\n", number);
+    }
+
+    return 0;
+}
+
+
+2. Program to check if a person is eligible to vote based on age and citizenship status:
+
+
+
+#include <stdio.h>
+
+int main() {
+    int age;
+    char citizen;
+
+    // Input the age and citizenship status
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    printf("Are you a citizen? (y/n): ");
+    scanf(" %c", &citizen);  // note the space before %c to capture the newline character
+
+    // Check if the person is eligible to vote
+    if (age >= 18) {
+        if (citizen == 'y' || citizen == 'Y') {
+            printf("You are eligible to vote.\n");
+        } else {
+            printf("You are not eligible to vote because you are not a citizen.\n");
+        }
+    } else {
+        printf("You are not eligible to vote because you are under 18.\n");
+    }
+
+    return 0;
+}
+
+
+1. Program to find the maximum of two numbers using a ternary operator:
+
+
+
+#include <stdio.h>
+
+int main() {
+    int num1, num2, max;
+
+    // Input two numbers
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+
+    // Find the maximum using a ternary operator
+    max = (num1 > num2) ? num1 : num2;
+
+    // Output the maximum
+    printf("The maximum of %d and %d is %d.\n", num1, num2, max);
+
+    return 0;
+}
+
+
+
+2. Program to calculate the sum of digits of a number until the result is a single digit:
+
+
+
+#include <stdio.h>
+
+int main() {
+    int number, sum, digit;
+
+    // Input the number
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    // Initialize sum
+    sum = number;
+
+    // Loop until sum is a single digit
+    while (sum >= 10) {
+        sum = 0;  // Reset sum for new calculation
+        while (number > 0) {
+            digit = number % 10;  // Extract the last digit
+            sum += digit;         // Add the digit to sum
+            number /= 10;         // Remove the last digit
+        }
+        number = sum;  // Update number to be the sum for the next iteration
+    }
+
+    // Output the single digit result
+    printf("The single digit sum is: %d\n", sum);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
