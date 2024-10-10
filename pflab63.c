@@ -2,54 +2,56 @@
 int main()
 {
 
-      int n, i, count = 0, orgn;
-      printf("Enter a number: ");
+    int num;
+    int i; 
+    int count = 0; 
+    int orgn = 0;
+    printf("Enter a number: ");
+    scanf("%d",&num);
 
-     scanf("%d",&n);
+    orgn = num;
 
-     orgn = n;
-
-    if (n<0)
+    if (num<0)
     {
-        n=-n;
+        num=-num;
     }
     do 
    {
-      n = n/10;
+      num = num/10;
       count++;
     } 
-    while(n!=0);
+    while(num!=0);
     {
         if(count>1)
         {
-             printf("\nThe number is a %d(multiple) digit number", count);
+            printf("\nThe number is a %d(multiple) digit number", count);
         }
         else
        { 
-              printf("\nThe number is a single digit number");
+            printf("\nThe number is a single digit number");
        }
     }
     if (orgn<2)
     {
-         printf("Number us neither prime nor composite");
+        printf("Number us neither prime nor composite");
     }
-   else if (orgn>=2)
-  { 
+    else if (orgn>=2)
+    { 
      for(i=2;i*i<=orgn;i++)
      {
 
-            if (orgn%i==0)
-            {
+        if (orgn%i==0)
+        {
 
-                 printf("\nnumber is composite");
-             }
+            printf("\nnumber is composite");
+        }
 
-            else if (orgn%i!=0)
-           {
-               printf("\nnumber is prime");
+        else if (orgn%i!=0)
+        {
+            printf("\nnumber is prime");
 
-           }
-     }
-  }
+        }
+    }
+   }
  return 0;
 }
