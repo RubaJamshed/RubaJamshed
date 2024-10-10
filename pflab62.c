@@ -1,36 +1,34 @@
 #include<stdio.h>
 int main()
-{
+{ 
+  int num;
+  int count=0;
+  
+  printf("Enter the number:");
+  scanf("%d",&num);
 
-    int num;
-    int i; 
-    int count = 0; 
-    int orgn = 0;
-    printf("Enter a number: ");
-    scanf("%d",&num);
+  if (num<0)
+  { 
+    num = -num;
+  }
+  
+  while(num != 0)
+  {
+    num = num/10;
+    count++;
+  }
+  
+  if (count>1)
+  {
+    printf("the number is a multiple-digit number\n");
+  }
+  else
+  {
+    printf("the number is a single-digit number\n");
+  }
+  
+  return 0;
 
-    orgn = num;
-
-    if (num<0)
-    {
-        num=-num;
-    }
-    do 
-    {
-      num = num/10;
-      count++;
-    } 
-    while(num!=0);
-    {
-        if(count>1)
-        {
-            printf("\nThe number is a %d(multiple) digit number", count);
-        }
-        else
-       { 
-            printf("\nThe number is a single digit number");
-       }
-    }
-      
- return 0;
 }
+
+
