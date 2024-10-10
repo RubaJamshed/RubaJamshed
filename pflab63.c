@@ -1,3 +1,6 @@
+
+
+
 #include<stdio.h>
 int main()
 {
@@ -5,7 +8,7 @@ int main()
     int num;
     int i; 
     int count = 0; 
-    int orgn = 0;
+    int orgn;
     printf("Enter a number: ");
     scanf("%d",&num);
 
@@ -24,7 +27,7 @@ int main()
     {
         if(count>1)
         {
-            printf("\nThe number is a %d(multiple) digit number", count);
+            printf("\nThe number is a multiple digit number");
         }
         else
        { 
@@ -53,5 +56,4 @@ int main()
         }
     }
    }
- return 0;
-}
+ return
