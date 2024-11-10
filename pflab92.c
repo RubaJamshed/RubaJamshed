@@ -11,8 +11,8 @@ int main()
 	
 	
 	c = swapIntegers(a,b);
+return 0;
 
-	
 }
 
 int swapIntegers(int a,int b)
