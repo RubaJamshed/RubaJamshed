@@ -4,7 +4,7 @@ int arthoperation(int a, int b, int opchoice);
 
 int main()
 {
-	int a,b,c,opchoice;
+	int a,b,opchoice;
 	
 	printf("enter the value 1: ");
 	scanf("%d", &a);
@@ -14,6 +14,7 @@ int main()
 	scanf("%d", &opchoice);
 	
     arthoperation(a ,  b, opchoice);
+return 0;
 }
 
 
